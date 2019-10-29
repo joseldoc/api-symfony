@@ -2,11 +2,10 @@
 
 namespace App\Service;
 
-use App\Entity\User;
+
 use FOS\RestBundle\Controller\AbstractFOSRestController;
 use FOS\RestBundle\Request\ParamFetcher;
 use FOS\RestBundle\View\View;
-use Symfony\Component\HttpFoundation\Response;
 
 class AuthService extends AbstractFOSRestController
 {
