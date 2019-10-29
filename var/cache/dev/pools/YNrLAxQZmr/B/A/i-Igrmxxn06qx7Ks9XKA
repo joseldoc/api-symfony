@@ -1,0 +1,105 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['FOS\\RestBundle\\Controller\\Annotations\\Post'] ?? Registry::p('FOS\\RestBundle\\Controller\\Annotations\\Post')),
+        clone ($p['FOS\\RestBundle\\Controller\\Annotations\\View'] ?? Registry::p('FOS\\RestBundle\\Controller\\Annotations\\View')),
+        clone ($p['Swagger\\Annotations\\Response'] ?? Registry::p('Swagger\\Annotations\\Response')),
+        clone ($p['Swagger\\Context'] ?? Registry::p('Swagger\\Context')),
+        clone ($p['FOS\\RestBundle\\Controller\\Annotations\\RequestParam'] ?? Registry::p('FOS\\RestBundle\\Controller\\Annotations\\RequestParam')),
+        clone $p['FOS\\RestBundle\\Controller\\Annotations\\RequestParam'],
+        clone $p['FOS\\RestBundle\\Controller\\Annotations\\RequestParam'],
+        clone $p['FOS\\RestBundle\\Controller\\Annotations\\RequestParam'],
+        clone $p['FOS\\RestBundle\\Controller\\Annotations\\RequestParam'],
+        clone ($p['Swagger\\Annotations\\Tag'] ?? Registry::p('Swagger\\Annotations\\Tag')),
+        clone $p['Swagger\\Context'],
+    ],
+    null,
+    [
+        'Symfony\\Component\\Routing\\Annotation\\Route' => [
+            'path' => [
+                '/signup',
+            ],
+            'name' => [
+                'user_signup',
+            ],
+            'methods' => [
+                [
+                    'POST',
+                ],
+            ],
+        ],
+        'FOS\\RestBundle\\Controller\\Annotations\\View' => [
+            'statusCode' => [
+                1 => 201,
+            ],
+        ],
+        'stdClass' => [
+            'response' => [
+                2 => 201,
+            ],
+            'description' => [
+                2 => 'register a new user',
+                4 => 'name and firstname',
+                'username',
+                'email',
+                'password',
+                'phone',
+            ],
+            '_context' => [
+                2 => $o[3],
+                9 => $o[10],
+            ],
+            'filename' => [
+                3 => '/var/www/html/outfit/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                10 => '/var/www/html/outfit/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+            ],
+            'line' => [
+                3 => 825,
+                10 => 825,
+            ],
+            'method' => [
+                3 => 'Annotation',
+                10 => 'Annotation',
+            ],
+            'class' => [
+                3 => 'DocParser',
+                10 => 'DocParser',
+            ],
+            'namespace' => [
+                3 => 'Doctrine\\Common\\Annotations',
+                10 => 'Doctrine\\Common\\Annotations',
+            ],
+            'annotations' => [
+                3 => [
+                    $o[2],
+                ],
+                10 => [
+                    $o[9],
+                ],
+            ],
+            'name' => [
+                4 => 'name',
+                'username',
+                'email',
+                'password',
+                'phone',
+                'Authentification',
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[2],
+        $o[4],
+        $o[5],
+        $o[6],
+        $o[7],
+        $o[8],
+        $o[9],
+    ],
+    []
+);

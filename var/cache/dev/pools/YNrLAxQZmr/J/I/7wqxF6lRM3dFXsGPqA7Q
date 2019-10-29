@@ -1,0 +1,92 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted'] ?? Registry::p('Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted')),
+        clone ($p['FOS\\RestBundle\\Controller\\Annotations\\Delete'] ?? Registry::p('FOS\\RestBundle\\Controller\\Annotations\\Delete')),
+        clone ($p['FOS\\RestBundle\\Controller\\Annotations\\View'] ?? Registry::p('FOS\\RestBundle\\Controller\\Annotations\\View')),
+        clone ($p['Swagger\\Annotations\\Response'] ?? Registry::p('Swagger\\Annotations\\Response')),
+        clone ($p['Swagger\\Context'] ?? Registry::p('Swagger\\Context')),
+        clone ($p['Swagger\\Annotations\\Tag'] ?? Registry::p('Swagger\\Annotations\\Tag')),
+        clone $p['Swagger\\Context'],
+    ],
+    null,
+    [
+        'Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted' => [
+            'attributes' => [
+                'ROLE_ADMIN',
+            ],
+        ],
+        'Symfony\\Component\\Routing\\Annotation\\Route' => [
+            'path' => [
+                1 => '/users/{id}',
+            ],
+            'name' => [
+                1 => 'delete_user',
+            ],
+            'methods' => [
+                1 => [
+                    'DELETE',
+                ],
+            ],
+        ],
+        'FOS\\RestBundle\\Controller\\Annotations\\View' => [
+            'statusCode' => [
+                2 => 204,
+            ],
+        ],
+        'stdClass' => [
+            'response' => [
+                3 => 200,
+            ],
+            'description' => [
+                3 => 'User is deleted',
+            ],
+            '_context' => [
+                3 => $o[4],
+                5 => $o[6],
+            ],
+            'filename' => [
+                4 => '/var/www/html/outfit/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                6 => '/var/www/html/outfit/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+            ],
+            'line' => [
+                4 => 825,
+                6 => 825,
+            ],
+            'method' => [
+                4 => 'Annotation',
+                6 => 'Annotation',
+            ],
+            'class' => [
+                4 => 'DocParser',
+                6 => 'DocParser',
+            ],
+            'namespace' => [
+                4 => 'Doctrine\\Common\\Annotations',
+                6 => 'Doctrine\\Common\\Annotations',
+            ],
+            'annotations' => [
+                4 => [
+                    $o[3],
+                ],
+                6 => [
+                    $o[5],
+                ],
+            ],
+            'name' => [
+                5 => 'User',
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[2],
+        $o[3],
+        $o[5],
+    ],
+    []
+);

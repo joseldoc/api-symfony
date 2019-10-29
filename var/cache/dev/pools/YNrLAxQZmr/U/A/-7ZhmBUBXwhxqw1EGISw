@@ -1,0 +1,85 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['FOS\\RestBundle\\Controller\\Annotations\\Patch'] ?? Registry::p('FOS\\RestBundle\\Controller\\Annotations\\Patch')),
+        clone ($p['FOS\\RestBundle\\Controller\\Annotations\\View'] ?? Registry::p('FOS\\RestBundle\\Controller\\Annotations\\View')),
+        clone ($p['Swagger\\Annotations\\Response'] ?? Registry::p('Swagger\\Annotations\\Response')),
+        clone ($p['Swagger\\Context'] ?? Registry::p('Swagger\\Context')),
+        clone ($p['Swagger\\Annotations\\Tag'] ?? Registry::p('Swagger\\Annotations\\Tag')),
+        clone $p['Swagger\\Context'],
+    ],
+    null,
+    [
+        'Symfony\\Component\\Routing\\Annotation\\Route' => [
+            'path' => [
+                '/users/{id}/activeOrDesactive',
+            ],
+            'name' => [
+                'is_active_user',
+            ],
+            'methods' => [
+                [
+                    'PATCH',
+                ],
+            ],
+        ],
+        'FOS\\RestBundle\\Controller\\Annotations\\View' => [
+            'statusCode' => [
+                1 => 200,
+            ],
+        ],
+        'stdClass' => [
+            'response' => [
+                2 => 200,
+            ],
+            'description' => [
+                2 => 'User is desactive',
+            ],
+            '_context' => [
+                2 => $o[3],
+                4 => $o[5],
+            ],
+            'filename' => [
+                3 => '/var/www/html/outfit/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                5 => '/var/www/html/outfit/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+            ],
+            'line' => [
+                3 => 825,
+                5 => 825,
+            ],
+            'method' => [
+                3 => 'Annotation',
+                5 => 'Annotation',
+            ],
+            'class' => [
+                3 => 'DocParser',
+                5 => 'DocParser',
+            ],
+            'namespace' => [
+                3 => 'Doctrine\\Common\\Annotations',
+                5 => 'Doctrine\\Common\\Annotations',
+            ],
+            'annotations' => [
+                3 => [
+                    $o[2],
+                ],
+                5 => [
+                    $o[4],
+                ],
+            ],
+            'name' => [
+                4 => 'User',
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[2],
+        $o[4],
+    ],
+    []
+);

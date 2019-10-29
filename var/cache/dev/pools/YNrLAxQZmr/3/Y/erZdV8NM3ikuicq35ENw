@@ -1,0 +1,86 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Nelmio\\ApiDocBundle\\Annotation\\Security'] ?? Registry::p('Nelmio\\ApiDocBundle\\Annotation\\Security')),
+        clone ($p['Swagger\\Context'] ?? Registry::p('Swagger\\Context')),
+        clone ($p['Swagger\\Annotations\\Parameter'] ?? Registry::p('Swagger\\Annotations\\Parameter')),
+        clone $p['Swagger\\Context'],
+        clone ($p['Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted'] ?? Registry::p('Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'Bearer',
+                2 => 'Authorization',
+            ],
+            '_context' => [
+                $o[1],
+                2 => $o[3],
+            ],
+            'filename' => [
+                1 => '/var/www/html/outfit/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                3 => '/var/www/html/outfit/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+            ],
+            'line' => [
+                1 => 825,
+                3 => 825,
+            ],
+            'method' => [
+                1 => 'Annotation',
+                3 => 'Annotation',
+            ],
+            'class' => [
+                1 => 'DocParser',
+                3 => 'DocParser',
+            ],
+            'namespace' => [
+                1 => 'Doctrine\\Common\\Annotations',
+                3 => 'Doctrine\\Common\\Annotations',
+            ],
+            'annotations' => [
+                1 => [
+                    $o[0],
+                ],
+                3 => [
+                    $o[2],
+                ],
+            ],
+            'in' => [
+                2 => 'header',
+            ],
+            'description' => [
+                2 => 'Bearer token',
+            ],
+            'required' => [
+                2 => true,
+            ],
+            'type' => [
+                2 => 'string',
+            ],
+            'default' => [
+                2 => 'Bearer TOKEN',
+            ],
+        ],
+        'Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted' => [
+            'attributes' => [
+                4 => 'ROLE_ADMIN',
+            ],
+            'message' => [
+                4 => 'Access denied',
+            ],
+            'statusCode' => [
+                4 => 404,
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[2],
+        $o[4],
+    ],
+    []
+);

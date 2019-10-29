@@ -1,0 +1,114 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['FOS\\RestBundle\\Controller\\Annotations\\Put'] ?? Registry::p('FOS\\RestBundle\\Controller\\Annotations\\Put')),
+        clone ($p['FOS\\RestBundle\\Controller\\Annotations\\View'] ?? Registry::p('FOS\\RestBundle\\Controller\\Annotations\\View')),
+        clone ($p['FOS\\RestBundle\\Controller\\Annotations\\RequestParam'] ?? Registry::p('FOS\\RestBundle\\Controller\\Annotations\\RequestParam')),
+        clone ($p['Swagger\\Annotations\\Response'] ?? Registry::p('Swagger\\Annotations\\Response')),
+        clone ($p['Swagger\\Context'] ?? Registry::p('Swagger\\Context')),
+        clone ($p['Swagger\\Annotations\\Parameter'] ?? Registry::p('Swagger\\Annotations\\Parameter')),
+        clone $p['Swagger\\Context'],
+        clone ($p['Swagger\\Annotations\\Tag'] ?? Registry::p('Swagger\\Annotations\\Tag')),
+        clone $p['Swagger\\Context'],
+    ],
+    null,
+    [
+        'Symfony\\Component\\Routing\\Annotation\\Route' => [
+            'path' => [
+                'roles/{id}',
+            ],
+            'name' => [
+                'update_role',
+            ],
+            'requirements' => [
+                [
+                    'id' => '\\d+',
+                ],
+            ],
+            'methods' => [
+                [
+                    'PUT',
+                ],
+            ],
+        ],
+        'FOS\\RestBundle\\Controller\\Annotations\\View' => [
+            'statusCode' => [
+                1 => '200',
+            ],
+        ],
+        'stdClass' => [
+            'name' => [
+                2 => 'name',
+                5 => 'name',
+                7 => 'Role',
+            ],
+            'description' => [
+                2 => 'name of role',
+                'return an object of Role',
+                5 => 'name of role',
+            ],
+            'response' => [
+                3 => 200,
+            ],
+            '_context' => [
+                3 => $o[4],
+                5 => $o[6],
+                7 => $o[8],
+            ],
+            'filename' => [
+                4 => '/var/www/html/outfit/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                6 => '/var/www/html/outfit/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                8 => '/var/www/html/outfit/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+            ],
+            'line' => [
+                4 => 825,
+                6 => 825,
+                8 => 825,
+            ],
+            'method' => [
+                4 => 'Annotation',
+                6 => 'Annotation',
+                8 => 'Annotation',
+            ],
+            'class' => [
+                4 => 'DocParser',
+                6 => 'DocParser',
+                8 => 'DocParser',
+            ],
+            'namespace' => [
+                4 => 'Doctrine\\Common\\Annotations',
+                6 => 'Doctrine\\Common\\Annotations',
+                8 => 'Doctrine\\Common\\Annotations',
+            ],
+            'annotations' => [
+                4 => [
+                    $o[3],
+                ],
+                6 => [
+                    $o[5],
+                ],
+                8 => [
+                    $o[7],
+                ],
+            ],
+            'in' => [
+                5 => 'query',
+            ],
+            'type' => [
+                5 => 'string',
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[2],
+        $o[3],
+        $o[5],
+        $o[7],
+    ],
+    []
+);
